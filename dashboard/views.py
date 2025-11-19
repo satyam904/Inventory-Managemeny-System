@@ -3,7 +3,13 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("HI. this is an index page")
+    return render(request, 'dashboard/index.html')
 
 def staff(request):
-    return HttpResponse("HI. this is an staff page")
+    return render(request, 'dashboard/staff.html')
+
+def products(request):
+    return render(request, 'dashboard/products.html')
+
+def order(request):
+    return render(request, 'dashboard/order.html')
